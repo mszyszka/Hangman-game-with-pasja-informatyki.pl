@@ -11,20 +11,24 @@ body {
     margin: 0 auto;
 }
 
-#gameSpace{
+#plansza{
     width: 900px;
     margin: 50px 0 50px 0;
     text-align: center;
     font-size: 48px;
+    min-height: 60px;
 }
 
 #szubienca {
     float: left;
     width: 450px;
     text-align: center;
+    min-height: 280px;
 }
 #alfabet {
     float: left;
     width: 450px;
     text-align: center;
+    min-height: 280px;
+
 }
