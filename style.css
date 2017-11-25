@@ -1,60 +1,30 @@
 body {
-    background-color: #000000;
+    background: #000000;
     color: lightgray;
-    font-size: 24px;
-    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
 }
 .clearfix {
     clear: both;
 }
 #container {
     width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-#game-space {
+#gameSpace{
     width: 900px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0 50px 0;
+    text-align: center;
     font-size: 48px;
-    text-align: center;
-    min-height: 60px;
 }
 
-#szubienica {
+#szubienca {
     float: left;
     width: 450px;
     text-align: center;
-    min-height: 280px;
 }
-
-#alphabet {
+#alfabet {
     float: left;
     width: 450px;
     text-align: center;
-    min-height: 280px;
-}
-
-.letter {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-    border: 3px solid gray;
-    float: left;
-    border-radius: 15px;
-}
-
-.letter:hover {
-    background-color: #222222;
-    color: white;
-    border: 3px solid white;
-    cursor: pointer;
-}
-
-.reset {
-    color: yellow;
-    cursor: pointer;
 }
