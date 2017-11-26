@@ -59,11 +59,23 @@ function start(){
     var trescDiva = "";
     
     for(i=0; i<=34; i++){
-        trescDiva = trescDiva + '<div class="litera">'+lettersArry[i]+'</div>';
+        var element = "lit" + i;
+        
+        trescDiva = trescDiva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+lettersArry[i]+'</div>';
         if( ((i+1)%7)==0) {
             trescDiva = trescDiva + '<div class="clearfix"></div>';
         }
     }
+    
+    function sprawdz(nr){
+        alert(nr);
+    }
+    
+      function daf(){
+        alert("as");
+    }
+    
+   
     
     document.getElementById("alfabet").innerHTML = trescDiva;
     
