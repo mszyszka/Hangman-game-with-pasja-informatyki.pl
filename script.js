@@ -4,14 +4,16 @@ var dlugosc = haslo.length;
 var haslo1 = "";
 
 
-for (i = 0; i < dlugosc; i++) {
+for (i = 0; i < dlugosc; i++)
+{
     if (haslo.charAt(i) == " ") haslo1 = haslo1 + " ";
     else haslo1 = haslo1 + "-";
 }
 
 
 
-function wypiszHaslo() {
+function wypiszHaslo() 
+{
     document.getElementById("plansza").innerHTML = haslo1;
 }
 window.onload = start;
@@ -58,26 +60,41 @@ function start(){
     
     var trescDiva = "";
     
-    for(i=0; i<=34; i++){
+    for(i=0; i<=34; i++)
+    {
         var element = "lit" + i;
         
         trescDiva = trescDiva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+lettersArry[i]+'</div>';
-        if( ((i+1)%7)==0) {
+        
+        if( ((i+1)%7)==0)
+        {
             trescDiva = trescDiva + '<div class="clearfix"></div>';
         }
+        
     }
-    
-    function sprawdz(nr){
-        alert(nr);
-    }
-    
-      function daf(){
-        alert("as");
-    }
-    
-   
-    
+
     document.getElementById("alfabet").innerHTML = trescDiva;
     
     wypiszHaslo();
 }
+
+String.prototype.ustawZnak = function(miejsce, znak)
+    {
+        if(miejsce > this.length-1) return this.toString();
+        else return this.substr(0,miejsce) +znak+ this.substr(miejsce+1);
+    }
+    
+    function sprawdz(nr)
+    {
+        for (i=0; i<dlugosc; i++)
+        {
+            
+           if(haslo.charAt(i)==lettersArry[nr])
+           {
+                haslo1 = haslo1.ustawZnak(i,lettersArry[nr]);
+           } 
+            
+        }
+        
+        wypiszHaslo();
+    }
